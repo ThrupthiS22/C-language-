@@ -1,3 +1,4 @@
+//AREA OF TRIANGLE
 #include <stdio.h>
 struct triangle{
     float b,h,a;
@@ -23,6 +24,33 @@ int main(){
     t = input();
     t = area(t);    
     display(t);
+    return 0;
+}
+//AREA OF CIRCLE
+#include<stdio.h>
+#define p 3.14
+struct circle{
+    float r,a;
+};
+typedef struct circle cir;
+cir input(){
+    cir c;
+    printf("Enter radius: ");
+    scanf("%f",&c.r);
+    return c;
+}
+cir area(cir c){
+    c.a = p * c.r * c.r;
+    return c;
+}
+void display(cir c){
+    printf("Circle with radius %.2f has area %.2f",c.r,c.a);
+}
+int main(){
+    cir c;
+    c = input();
+    c = area(c);
+    display(c);
     return 0;
 }
 
